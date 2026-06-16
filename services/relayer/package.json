@@ -4,12 +4,17 @@
   "description": "Relayer API service for Ancore smart account operations",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "build": "node init && tsc --project tsconfig.json",
     "test": "jest --coverage",
     "lint": "eslint src/",
     "check:log-redaction": "node scripts/check-log-redaction.js"
   },
-  "keywords": ["ancore", "relayer", "stellar", "soroban"],
+  "keywords": [
+    "ancore",
+    "relayer",
+    "stellar",
+    "soroban"
+  ],
   "license": "Apache-2.0",
   "dependencies": {
     "@ancore/stellar": "workspace:*",
@@ -35,9 +40,17 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "testMatch": ["**/src/**/*.test.ts", "**/tests/**/*.test.ts"],
+    "testMatch": [
+      "**/src/**/*.test.ts",
+      "**/tests/**/*.test.ts"
+    ],
     "transform": {
-      "^.+\\.tsx?$": ["ts-jest", { "tsconfig": "tsconfig.test.json" }]
+      "^.+\\.tsx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.test.json"
+        }
+      ]
     }
   }
 }
