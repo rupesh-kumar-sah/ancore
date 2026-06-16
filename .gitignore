@@ -24,11 +24,9 @@ coverage/
 .nyc_output/
 
 # Environment
-.env
 .env*.local
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -83,3 +81,4 @@ implementation.md
 submission_details.md
 brief.md
 checks.md
+config.bat

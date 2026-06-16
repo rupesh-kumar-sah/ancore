@@ -13,14 +13,16 @@
     }
   },
   "scripts": {
-    "build": "tsc -p ./tsconfig.json",
-    "dev": "tsc -p ./tsconfig.json --watch",
+    "build": "node init && tsc -p ./tsconfig.json",
+    "dev": "node init && tsc -p ./tsconfig.json --watch",
     "test": "jest --config ./jest.config.cjs --coverage --runInBand",
     "lint": "eslint src/",
     "clean": "rm -rf dist coverage",
     "test:ci": "pnpm run build && pnpm run test"
   },
   "dependencies": {
+    "@ancore/core-sdk": "workspace:*",
+    "@ancore/types": "workspace:*",
     "react": "^18.3.1"
   },
   "devDependencies": {
@@ -39,10 +41,5 @@
     "ts-jest": "^29.4.0",
     "tsup": "^8.0.0",
     "typescript": "^5.6.0"
-  },
-  "dependencies": {
-    "@ancore/core-sdk": "workspace:*",
-    "@ancore/types": "workspace:*",
-    "react": "^18.3.1"
   }
 }
