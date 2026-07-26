@@ -14,12 +14,12 @@
     "./styles": "./src/styles/globals.css"
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "node init && tsup",
+    "dev": "node init && tsup --watch",
     "lint": "pnpm run verify:theme-tokens && eslint src/",
     "clean": "rm -rf dist",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "test": "vitest run",
     "test:watch": "vitest",
     "verify:theme-tokens": "pnpm --dir ../.. verify:theme-tokens"

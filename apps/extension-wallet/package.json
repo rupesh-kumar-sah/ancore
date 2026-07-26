@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "predev": "corepack pnpm --dir ../.. --filter @ancore/ui-kit build",
-    "dev": "vite",
+    "dev": "node init && vite",
     "prebuild": "corepack pnpm --dir ../.. --filter @ancore/ui-kit build",
-    "build": "vite build",
+    "build": "node init && vite build",
     "test": "vitest run",
     "pretest": "corepack pnpm --dir ../.. --filter @ancore/ui-kit build",
     "test:watch": "vitest",

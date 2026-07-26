@@ -13,8 +13,8 @@
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --tsconfig tsconfig.build.json",
-    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "build": "node init && tsup src/index.ts --format cjs,esm --dts --tsconfig tsconfig.build.json",
+    "dev": "node init && tsup src/index.ts --format cjs,esm --dts --watch",
     "test": "jest --coverage",
     "lint": "eslint src/",
     "clean": "rm -rf dist"
