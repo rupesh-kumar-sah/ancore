@@ -4,7 +4,7 @@
   "description": "Relayer API service for Ancore smart account operations",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc --project tsconfig.json",
+    "build": "node init && tsc --project tsconfig.json",
     "test": "jest --coverage",
     "lint": "eslint src/",
     "check:log-redaction": "node scripts/check-log-redaction.js"

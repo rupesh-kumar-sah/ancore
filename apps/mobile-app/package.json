@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-native start",
+    "start": "node init && react-native start",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
-    "build:ios": "react-native build-ios",
-    "build:android": "react-native build-android",
+    "build:ios": "node init && react-native build-ios",
+    "build:android": "node init && react-native build-android",
     "lint": "eslint src/",
     "test": "jest --config jest.config.cjs",
     "postinstall": "rn-nodeify --install buffer,crypto,stream,events,process --hack"
