@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "predev": "pnpm --dir ../.. --filter @ancore/ui-kit build",
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node init && vite",
+    "build": "node init && vite build",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "pretest": "pnpm --dir ../.. --filter @ancore/ui-kit build",
